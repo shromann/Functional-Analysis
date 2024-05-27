@@ -13,14 +13,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up LaTeX
-        uses: dante-ev/latex-action
-        with:
-          root_file: main.tex
-          latexmk_shell_escape: true
+      - name: Set up LaTeX environment
+        run: sudo apt-get update && sudo apt-get install -y texlive-full
 
       - name: Compile LaTeX document
-        run: latexmk -pdf -f -interaction=nonstopmode main.tex
+        run: |
+          latexmk -pdf -f -interaction=nonstopmode main.tex
 
       - name: Commit and push PDF
         run: |
