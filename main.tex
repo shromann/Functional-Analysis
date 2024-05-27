@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage[a4paper, total={6in, 9in}]{geometry}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsfonts, amsthm, amssymb}
+\usepackage[hidelinks]{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[definition]{Theorem}
+\newtheorem{corollary}[definition]{Corollary}
+
+\renewcommand{\l}[1]{\ell^{#1}}
+\renewcommand{\sb}[1]{\left[#1\right]}
+\newcommand{\rb}[1]{\left(#1\right)}
+\newcommand{\cb}[1]{\left{#1\right}}
+
+\newcommand{\ra}{\rightarrow}
+\newcommand{\defn}[2]{\begin{definition}\textbf{#1} #2 \end{definition}}
+\newcommand{\thrm}[2]{\begin{theorem}\textbf{#1} #2 \end{theorem}}
+\newcommand{\lmma}[2]{\begin{lemma}\textbf{#1} #2 \end{lemma}}
+\newcommand{\clry}[2]{\begin{corollary}\textbf{#1} #2 \end{corollary}}
+
+\newcommand{\eS}[2]{#1 \in #2}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\inR}[1]{\eS{#1}{\R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\inC}[1]{\eS{#1}{\C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\inF}[1]{\eS{#1}{\F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\inN}[1]{\eS{#1}{\N}}
+
+
+\newcommand{\V}{$V$}
+\newcommand{\inV}[1]{\eS{#1}{V}}
+
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\norm}[1]{\abs{\abs{#1}}}
+\newcommand{\map}[3]{#1 : #2 \ra #3}
+\newcommand{\set}[2]{\{#1|#2\}}
+\newcommand{\seq}[1]{\rb{#1_n}}
+\newcommand{\conv}[2]{\seq{#1} \ra #2}
+\newcommand{\isFinite}[1]{#1 < \infty}
+\newcommand{\sumInf}[1]{\sum_{#1}^\infty}
+\newcommand{\sumFin}[2]{\sum_{#1}^{#2}}
+
+\title{Functional Analysis}
+\author{Shromann Majumder}
+\date{}
+
+\begin{document}
+\maketitle
+Throughout these notes, we will denote \V as a \hyperlink{https://en.wikipedia.org/wiki/Vector_space}{vector space} over a field $\F$, for which is either $\C$ or $\R$ (unless otherwise stated). We present definitions and theorems, along their respective proofs. These notes assume no prior background in pure mathematics, hence all recalled definitions and theorems mentioned in pre-requisite courses are also provided. Welcome to \emph{Functional Analysis}. 
+% \newpage
+\tableofcontents
+\newpage
+\include{sections/NormedAndBanachSpaces}
+\include{sections/BoundedLinearOperator}
+\include{sections/DualSpaceHanhBanach}
+\include{sections/FuncAnal}
+\include{sections/HilbertSpace}
+\include{sections/LinFuncLinOpsHilbert}
+\include{sections/SpectrumFuncCalc}
+\include{sections/CompactOpe}
+
+
+
+\end{document}
